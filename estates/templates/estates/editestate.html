@@ -1,10 +1,14 @@
 {% extends 'estates/layout.html' %}
 {% block content %}
 
-    <form method="POST">
+<div class="container text-center">
+    <form method="post">
         {% csrf_token %}
-        {{form}}
-        <button>Edit Estate</button>
-    </form>
+        <div class="form-group">
+          {{form}}
+        </div>
+        <button type="submit" class="btn btn-primary">Edit Estate</button>
+      </form>
+</div>
 
 {% endblock %}

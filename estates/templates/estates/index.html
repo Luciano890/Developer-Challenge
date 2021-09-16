@@ -1,21 +1,52 @@
-{% extends 'estates/layout.html' %}
-{% block content %}
-    <h1>Lista de dueños</h1>
+{% extends 'estates/layout.html' %} {% block content %}
 
-    <ul>
-    {% for own in owners %}
-        <li>{{own}}</li>
-        <button><a href="{% url 'deleteowner' own.id %}">Delete</a></button>
-        <button><a href="{% url 'editowner' own.id %}">Edit</a></button>
-    {% endfor %}
-    </ul>
-    <br><br>
-    <h1>Lista de predios</h1>
-    <ul>
-    {% for est in estates %}
-        <li>{{est}}</li>
-        <button><a href="{% url 'deleteestate' est.id %}">Delete</a></button>
-        <button><a href="{% url 'editestate' est.id %}">Edit</a></button>
-    {% endfor %}
-    </ul>
+<div class="container text-center">
+    <h1>Owners List</h1>
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Owners</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for own in owners %}
+        <tr>
+          <th scope="row">{{ own.id }}</th>
+          <td>{{own}}</td>
+          <td>
+            <a class="btn btn-danger btn-sm" href="{% url 'deleteowner' own.id %}">Delete</a>
+            <a class="btn btn-primary btn-sm" href="{% url 'editowner' own.id %}">Edit</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+<br>
+<div class="container text-center">
+    <h1>Estates List</h1>
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Owners</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for est in estates %}
+        <tr>
+          <th scope="row">{{ est.id }}</th>
+          <td>{{est}}</td>
+          <td>
+            <a class="btn btn-danger btn-sm" href="{% url 'deleteestate' est.id %}">Delete</a>
+            <a class="btn btn-primary btn-sm" href="{% url 'editestate' est.id %}">Edit</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
 {% endblock %}
