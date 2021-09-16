@@ -3,20 +3,20 @@ from estates.choices import locations,type
 
 class Owner(models.Model):
     
-    _id = models.CharField(max_length=20)
-    _identificationNumber = models.CharField(max_length=10)
-    _type = models.CharField(max_length=10, choices=type)
+    ID = models.CharField(max_length=20)
+    identificationNumber = models.CharField(max_length=10)
+    type = models.CharField(max_length=10, choices=type)
     
     def __str__(self) -> str:
-        return f"Owner with id: {self._id} and type: {self._type}"
+        return f"Owner with id: {self.ID}"
     
     
 class Estate(models.Model):
     
-    _identificationCadastral = models.CharField(max_length=20)
-    _typeEstate = models.CharField(max_length=10, choices=locations)
-    _registrationNumber = models.CharField(max_length=20)
+    identificationCadastral = models.CharField(max_length=20)
+    typeEstate = models.CharField(max_length=10, choices=locations)
+    registrationNumber = models.CharField(max_length=20)
     
     def __str__(self) -> str:
-        return f"Estate with id: {self._identificationCadastral} and registration number: {self._registrationNumber}"
+        return f"Estate with registration number: {self.registrationNumber}"
     
