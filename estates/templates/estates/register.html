@@ -1,0 +1,20 @@
+{% extends 'estates/layout.html' %} {% block content %}
+
+
+<div class="container text-center">
+    <center>
+        <h1>Register</h1>
+    </center>
+    <br><br>
+    <div class="container-sm">
+        <form class="form" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <br>
+        
+            <button type="submit" id="submit" class="btn btn-success">Register</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

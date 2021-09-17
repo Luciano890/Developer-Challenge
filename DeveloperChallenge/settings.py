@@ -1,6 +1,15 @@
 
 from pathlib import Path
 
+from os.path import abspath, dirname, join
+
+
+def root(*args):
+    """
+    Get the absolute path of the given path relative to the project root.
+    """
+    return join(abspath(dirname(__file__)), *args)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -14,7 +23,7 @@ SECRET_KEY = 'django-insecure-uoy=6c8#r+gkq6bd*qft$-4#8g*^ejc776y1gwkf!tu55!ixno
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -26,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'estates',
 ]
 
 MIDDLEWARE = [
@@ -43,7 +53,7 @@ ROOT_URLCONF = 'DeveloperChallenge.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [root('estates', 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,8 +74,12 @@ WSGI_APPLICATION = 'DeveloperChallenge.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'estatesdb',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -102,6 +116,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_REDIRECT_URL = 'home'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
