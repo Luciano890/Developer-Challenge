@@ -9,7 +9,7 @@
 ### Table of Contents:
 
 1. [About the project](#About-the-project)
-    -[Explanation of the Solution](#Explanation-of-the-Solution)
+    - [Explanation of the Solution](#Explanation-of-the-Solution)
 2. [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
     - [Installation](#Installation)
@@ -26,6 +26,8 @@ This is a very simple app with a login and registration system, made in Django f
 ### Explanation of the Solution
 
 Creation of a CRUD in Django with the required models, with the design of three tables: Owners, Estates and ManytoMany table for the many-to-many relationship; creating the DB in PostgreSQL with the appropriate credentials and the use of the Bootstrap framework for the frontend creation.
+
+> the many-to-many relationship can be evidenced within the administrator mode
 
 ---
 
