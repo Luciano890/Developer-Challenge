@@ -8,6 +8,10 @@ from estates import choices
 from estates.models import Owner, Estate
 from estates.choices import type, locations
 
+"""
+Serializing models
+"""
+
 class OwnerForm(forms.ModelForm):
     
     ID = forms.CharField(label=False,min_length=4, max_length=30,
@@ -60,9 +64,25 @@ class EstateForm(forms.ModelForm):
                                  }
                              ))
     
+    name = forms.CharField(label=False,min_length=4, max_length=30,required=False,strip=False,
+                             widget=forms.TextInput(
+                                 attrs={
+                                     'placeholder':"Name",
+                                     'class':'form-control',
+                                 }
+                             ))
+    
+    address = forms.CharField(label=False,min_length=4, max_length=30,required=False,strip=False,
+                             widget=forms.TextInput(
+                                 attrs={
+                                     'placeholder':"Address",
+                                     'class':'form-control',
+                                 }
+                             ))
+    
     class Meta:
         model = Estate
-        fields = ['identificationCadastral','typeEstate','registrationNumber']
+        fields = ['identificationCadastral','typeEstate','registrationNumber','name','address']
          
 class UserRegisterForm(forms.ModelForm):
     
