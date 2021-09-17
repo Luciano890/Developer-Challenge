@@ -14,7 +14,8 @@
     - [Prerequisites](#Prerequisites)
     - [Installation](#Installation)
 3. [Usage](#Usage)
-4. [Contact](#Contact)
+4. [Plus](#Plus)
+5. [Contact](#Contact)
 
 ---
 
@@ -114,6 +115,14 @@ python3 manage.py runserver
 ## Usage
 
 Once the app is installed, you can access the `localhost:8000/admin` path and enter the administrator with the super user, you can also enter the app with that user by going to `localhost:8000/register` or loging at `localhost:8000/login`
+
+---
+
+## Plus
+
+### database model
+
+![ModeloDeDatos2](https://user-images.githubusercontent.com/62488915/133726166-4b67d3bf-6686-4bdb-b20e-babf35275c38.png)
 
 ---
 
