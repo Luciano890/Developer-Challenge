@@ -9,14 +9,10 @@
 ### Table of Contents:
 
 1. [About the project](#About-the-project)
-
 2. [Getting Started](#Getting-Started)
-
     - [Prerequisites](#Prerequisites)
     - [Installation](#Installation)
-
 3. [Usage](#Usage)
-
 4. [Contact](#Contact)
 
 ---
