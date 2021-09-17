@@ -2,6 +2,10 @@ from django.urls import path
 from django.contrib.auth.views import LoginView, LogoutView
 from . import views
 
+"""
+specifying urls for the web application
+"""
+
 urlpatterns = [
     
     path('', views.register, name="register"),
