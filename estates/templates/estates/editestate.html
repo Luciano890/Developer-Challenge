@@ -5,7 +5,7 @@
     <form method="post">
         {% csrf_token %}
         <div class="form-group">
-          {{form}}
+          {{form.as_p}}
         </div>
         <button type="submit" class="btn btn-primary">Edit Estate</button>
       </form>

@@ -1,7 +1,9 @@
 import estates
 from django.shortcuts import redirect, render
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 from estates.models import *
-from estates.forms import OwnerForm, EstateForm
+from estates.forms import OwnerForm, EstateForm, UserRegisterForm
 
 def Home(request):
     owners = Owner.objects.all()
@@ -9,6 +11,19 @@ def Home(request):
     context = {'owners':owners, 'estates':estates}
     
     return render(request, 'estates/index.html', context)
+
+def register(request):
+    if request.method == "POST":
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            messages.success(request, f"User {username} was successfully created")
+            return redirect('home')
+    else:
+        form = UserRegisterForm()
+    context = {'form':form}
+    return render(request, 'estates/register.html',context)
 
 def addowner(request):
     if request.method == "POST":
