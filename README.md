@@ -15,7 +15,8 @@
     - [Installation](#Installation)
 3. [Usage](#Usage)
 4. [Plus](#Plus)
-5. [Contact](#Contact)
+5. [Lincense](#Lincense)
+6. [Contact](#Contact)
 
 ---
 
@@ -125,6 +126,12 @@ Once the app is installed, you can access the `localhost:8000/admin` path and en
 ### database model
 
 ![ModeloDeDatos2](https://user-images.githubusercontent.com/62488915/133726166-4b67d3bf-6686-4bdb-b20e-babf35275c38.png)
+
+---
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
