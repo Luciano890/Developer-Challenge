@@ -15,7 +15,7 @@
     - [Installation](#Installation)
 3. [Usage](#Usage)
 4. [Plus](#Plus)
-5. [Lincense](#Lincense)
+5. [License](#License)
 6. [Contact](#Contact)
 
 ---
