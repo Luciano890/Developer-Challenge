@@ -1,3 +1,5 @@
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/Luciano890/Developer-Challenge/dev?color=green&logo=github&logoColor=white&style=for-the-badge)
+
 # Developer Challenge
 
 ## by Luciano Chavarria
